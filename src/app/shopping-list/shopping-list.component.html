@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-10"> 
+        <!-- // to create very wide col here -->
+        <app-shopping-edit 
+        (ingredientAdded)="onAddingIngredient($event)" 
+        (ingredientEdited)="onEditingIngredient($event)" 
+        [ingredientToEdit]="ingredientToEdit"></app-shopping-edit>
+    <hr>
+        <ul>
+            <div class="card" 
+                style="cursor: pointer;"
+                *ngFor="let ingredientEle of ingredients"  (click)="editIngredient(ingredientEle)">
+                <div class="card-body">
+                  {{ingredientEle.name}} ({{ingredientEle.amount}})
+                </div>
+              </div>
+        </ul>
+    
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<app-header (chosenLink)="onChooseLink($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="activeComponent === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="activeComponent === 'shoppingList'"></app-shopping-list>
+    </div>
+  </div>
+</div>
